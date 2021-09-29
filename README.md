@@ -15,6 +15,10 @@ Pour les dépendances il suffit de lancer la commande ``pip install -r requireme
 
 
 
-## Le programme
+## Lancement rapide
 
 Une fois les dépendances installées il suffit de lancer le fichier "main.py" et de suivre les instructions de la console!
+
+## Explication des fichiers 
+
+
