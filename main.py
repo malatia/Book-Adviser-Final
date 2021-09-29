@@ -5,38 +5,32 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 
 
-def nouvelUtilisateur(cos_sim, new_book_tags):
+def nouvelUtilisateur(cos_sim, new_book_tags, book_id = 3):
     """Cette fonction recommende des livres en fonction des centre d'intérêts de l'utilisateur ou des livres qu'il a déjà pu lire.
     Cependant, vu que l'on considère ici que c'est un nouvel utilisateur, on peut imaginer que dans la version finale on lui demandera
     ses préférences de genre ou les livres qu'il a lu, en lui proposant parmi une liste.
     Pour le moment, nous allons simplement partir du principe que l'utilisateur indique avoir lu "Harry Potter and the Philosopher's Stone"
+    et gardons donc la valeur par défaut pour "book_id"
 
     Args:
         cos_sim (numpy.ndarray): Matrice contenant les poids pour calculer les similarités
         new_book_tags(DataFrame) : DataFrame contenant les infos sur la base de livres
+        book_id (int, optional): L'id du livre dont on veut les recommendations. On le met par défaut à l'id du premier livre Harry Potter
 
     Returns:
     [DataFrame]: Retourne un DataFrame contenant des infos sur les 10 livres les plus adaptés d'après l'algorithme
     
     """
-    #Le chiffre 3 correspond ici à l'index du livre "Harry Potter and the Philosopher's Stone"
-    harry_id = 3
-    harry_recommendation = np.argsort(cos_sim[harry_id])
-    harry_top10 = harry_recommendation[-10:][::-1]
+    #On calcule ici les livres les plus proches de celui demandé 
+    book_recommendation = np.argsort(cos_sim[book_id])
+    book_top10 = book_recommendation[-10:][::-1]
     print("Nous partons du principe que le nouvel utilisateur dit avoir lu le premier des Harry Potter")
-    return new_book_tags.iloc[harry_top10]
+    return new_book_tags.iloc[book_top10]
 
 
-def ancienUtilisateur(cos_sim):
-    """[summary]
+def ancienUtilisateur(cos_sim, user_id):
 
-    Args:
-        cos_sim ([type]): [description]
-
-    Returns:
-        [type]: [description]
-    """
-    print(cos_sim)
+    print("ok")
 
 def main():
     #On calcule la cosine_similarity quand on load le document
