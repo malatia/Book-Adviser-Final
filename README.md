@@ -13,7 +13,14 @@ Pour les dépendances il suffit de lancer la commande ``pip install -r requireme
 
 ## Pour la base de données
 
+Pour installer la base de données, il faut exécuter le script "script_bdd.sql" sur MySQL-Workbench ou directement MySql,
+ce qui permettras la création de la structure de la base de données.
 
+Pour insérer les données dans la table il faut exécuter le script "nettoyage_insertion_donnees.ipynb", 
+mettre ses identifiant de base de données dans la première cellule et ensuite executer le programme 
+(une seule fois seulement sous peine d'écrire plusieurs fois dans la base de données).
+
+Bien pensé à executer la commande SQL "SET GLOBAL FOREIGN_KEY_CHECKS=1;" après l'insertion des données pour rétablir le chek des clef étrangères.
 
 ## Lancement rapide
 
@@ -21,4 +28,5 @@ Une fois les dépendances installées il suffit de lancer le fichier "main.py" e
 
 ## Explication des fichiers 
 
-
+"script_bdd.sql" est le script sql de la structure de la base de données
+"nettoyage_insertion_donnees.ipynb" est le script python (jupyter) de l'insertion des données dans la base de données
