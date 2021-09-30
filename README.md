@@ -30,3 +30,5 @@ Une fois les dépendances installées il suffit de lancer le fichier "main.py" e
 
 "script_bdd.sql" est le script sql de la structure de la base de données
 "nettoyage_insertion_donnees.ipynb" est le script python (jupyter) de l'insertion des données dans la base de données
+Le compte rendu est ... comme son nom l'indique notre compte rendu!
+Les fichiers de dossier "Data" y sont décrits. 
