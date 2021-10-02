@@ -27,6 +27,7 @@ Bien pensé à executer la commande SQL "SET GLOBAL FOREIGN_KEY_CHECKS=1;" aprè
 Il faut télécharger le modèle entraîné car il est trop gros pour aller sur github.  
 Vous pourrez le trouver à cette adresse : https://www.transfernow.net/dl/20211002R6jcX8rO  
 Il suffira ensuite de créer un dossier "Models" à la racine, et de mettre le fichier téléchargé à l'intérieur.  
+Il se peut également selon les OS que le fichier ait été renommé, il faut bien lui donner le nom "KNNWithMeans".  
 Une fois ceci fait et les dépendances installées, il suffit de lancer le fichier "main.py" et de suivre les instructions de la console!  
 
 ## Explication des fichiers 
